@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
+// colors
 const colors = {
   nav: "#0A121F",
   header: `#08101E`,
   btn: "#3A68B8",
   commit: "#B5B7BB",
 };
-
+// container
 export const Container = styled.div`
   width: 1000px;
   margin: 0 auto;
+  display: ${({flex})=>flex?'flex':'block'};
+  flex: 1;
 `;
-
+// button
 export const Button = styled.div`
   width: ${({ width }) => (width ? "150px" : "100px")};
   height: 40px;
@@ -37,6 +40,21 @@ export const Button = styled.div`
     transform: scale(0.9);
   }
 `;
+// barnd
+export const Brand = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  img {
+    height: 45px;
+  }
+  span {
+    margin-left: 5px;
+    color: ${colors.btn};
+  }
+`;
+
+////////////
 
 // navbar section
 export const Nav = styled.div`
@@ -67,18 +85,6 @@ export const Navbars = styled.div`
         color: #ffffff;
       }
     }
-  }
-`;
-
-export const Brand = styled.div`
-  display: flex;
-  align-items: center;
-  img {
-    height: 45px;
-  }
-  span {
-    margin-left: 5px;
-    color: ${colors.btn};
   }
 `;
 
@@ -144,3 +150,7 @@ Headers.Buttons = styled.div`
   display: flex;
   align-items: center;
 `;
+// footer section
+export const Box = styled.div`
+  
+`
