@@ -23,7 +23,7 @@ export const Header = () => {
         <Headers.Top>
           <SideLeft>
             <Desc>Next genaretion platform</Desc>
-            <Title>Artificial intelligence & Syber security</Title>
+            <Title>Artificial intelligence & Cyber security</Title>
             <Commit>
               Lorem ipsum is placeholder text commonly used in the graphic,
               print, and publishing industries for previewing layouts and visual
