@@ -2,17 +2,16 @@ import styled from "styled-components";
 
 // colors
 const colors = {
-  nav: "#0A121F",
+  nav: `#0A121F`,
   header: `#08101E`,
-  btn: "#3A68B8",
-  commit: "#B5B7BB",
+  footer: `#070F1D`,
+  btn: `#3A68B8`,
+  commit: `#B5B7BB`,
 };
 // container
 export const Container = styled.div`
   width: 1000px;
   margin: 0 auto;
-  display: ${({flex})=>flex?'flex':'block'};
-  flex: 1;
 `;
 // button
 export const Button = styled.div`
@@ -43,13 +42,15 @@ export const Button = styled.div`
 // barnd
 export const Brand = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: ${({start})=>start?'column':'row'};
+  align-items: ${({start})=>start?'flex-start':'center'};
   cursor: pointer;
   img {
     height: 45px;
   }
   span {
-    margin-left: 5px;
+    margin-left: ${({start})=>start?'0':'5px'};
+    margin: ${({start})=>start&&'5px 0 7px'};
     color: ${colors.btn};
   }
 `;
@@ -151,6 +152,11 @@ Headers.Buttons = styled.div`
   align-items: center;
 `;
 // footer section
+export const Footers = styled.div`
+  width: 100%;
+  background-color: ${colors.footer};
+  padding: 50px 0 100px;
+`
 export const Box = styled.div`
-  
+
 `
