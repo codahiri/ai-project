@@ -94,7 +94,7 @@ Headers.Top = styled.div`
 Headers.Bottom = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 55px;
   .f-img{
     margin-left: 0;
   }
