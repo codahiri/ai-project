@@ -13,14 +13,14 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.div`
-  width: ${({width})=>width?'150px':'100px'};
+  width: ${({ width }) => (width ? "150px" : "100px")};
   height: 40px;
   background: #3a68b8;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: ${({mr})=>mr?'15px':'0'};
+  margin-right: ${({ mr }) => (mr ? "15px" : "0")};
 
   font-family: Open Sans;
   font-style: normal;
@@ -49,17 +49,6 @@ export const Navbars = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .nav-brand {
-    display: flex;
-    align-items: center;
-    img {
-      height: 45px;
-    }
-    span {
-      margin-left: 5px;
-      color: ${colors.btn};
-    }
-  }
   .nav-items {
     display: flex;
     .f-child {
@@ -81,6 +70,18 @@ export const Navbars = styled.div`
   }
 `;
 
+export const Brand = styled.div`
+  display: flex;
+  align-items: center;
+  img {
+    height: 45px;
+  }
+  span {
+    margin-left: 5px;
+    color: ${colors.btn};
+  }
+`;
+
 // header section
 export const Headers = styled.div`
   width: 100%;
@@ -95,10 +96,10 @@ Headers.Bottom = styled.div`
   display: flex;
   align-items: center;
   margin-top: 55px;
-  .f-img{
+  .f-img {
     margin-left: 0;
   }
-  img{
+  img {
     margin-left: 30px;
   }
 `;
@@ -142,4 +143,4 @@ export const Commit = styled.div`
 Headers.Buttons = styled.div`
   display: flex;
   align-items: center;
-`
+`;

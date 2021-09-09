@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Nav, Navbars } from "../styles/styles";
+import { Brand, Button, Container, Nav, Navbars } from "../styles/styles";
 import Logo from "../../images/logo/logo.png";
 
 export const Navbar = () => {
@@ -7,10 +7,10 @@ export const Navbar = () => {
     <Nav>
       <Container>
         <Navbars>
-          <div className='nav-brand'>
+          <Brand>
             <img src={Logo} alt="Logo" />
             <span>Artificial Intelligence</span>
-          </div>
+          </Brand>
           <ul className="nav-items">
             <li className='f-child'>
               <a href="/">Home</a>
