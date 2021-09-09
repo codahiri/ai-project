@@ -86,7 +86,7 @@ export const Brand = styled.div`
 export const Headers = styled.div`
   width: 100%;
   background-color: ${colors.header};
-  padding: 100px 0 70px;
+  padding: 50px 0 70px;
 `;
 Headers.Top = styled.div`
   display: flex;
