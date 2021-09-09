@@ -13,13 +13,14 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.div`
-  width: 100px;
+  width: ${({width})=>width?'150px':'100px'};
   height: 40px;
   background: #3a68b8;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: ${({mr})=>mr?'15px':'0'};
 
   font-family: Open Sans;
   font-style: normal;
@@ -29,10 +30,10 @@ export const Button = styled.div`
   color: #fff;
   cursor: pointer;
   transition: all 0.2s linear;
-  :hover{
+  :hover {
     opacity: 0.7;
   }
-  :active{
+  :active {
     transform: scale(0.9);
   }
 `;
@@ -61,7 +62,7 @@ export const Navbars = styled.div`
   }
   .nav-items {
     display: flex;
-    .f-child{
+    .f-child {
       margin-left: 0;
     }
     li {
@@ -79,3 +80,66 @@ export const Navbars = styled.div`
     }
   }
 `;
+
+// header section
+export const Headers = styled.div`
+  width: 100%;
+  background-color: ${colors.header};
+  padding: 100px 0 70px;
+`;
+Headers.Top = styled.div`
+  display: flex;
+  align-items: center;
+`;
+Headers.Bottom = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  .f-img{
+    margin-left: 0;
+  }
+  img{
+    margin-left: 30px;
+  }
+`;
+export const SideLeft = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+`;
+export const SideRight = styled.div`
+  width: 50%;
+`;
+export const Desc = styled.div`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: ${colors.btn};
+`;
+export const Title = styled.div`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 100%;
+  color: #ffffff;
+  margin: 10px 0 15px;
+`;
+export const Commit = styled.div`
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  color: #ffffff;
+  margin-bottom: 40px;
+`;
+Headers.Buttons = styled.div`
+  display: flex;
+  align-items: center;
+`
