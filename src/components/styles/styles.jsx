@@ -1,11 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 // colors
 const colors = {
-  nav: "#0A121F",
+  nav: `#0A121F`,
   header: `#08101E`,
-  btn: "#3A68B8",
-  commit: "#B5B7BB",
+  footer: `#070F1D`,
+  btn: `#3A68B8`,
+  commit: `#B5B7BB`,
 };
 // container
 export const Container = styled.div`
@@ -45,13 +46,15 @@ export const Button = styled.div`
 // barnd
 export const Brand = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: ${({ start }) => (start ? "column" : "row")};
+  align-items: ${({ start }) => (start ? "flex-start" : "center")};
   cursor: pointer;
   img {
     height: 45px;
   }
   span {
-    margin-left: 5px;
+    margin-left: ${({ start }) => (start ? "0" : "5px")};
+    margin: ${({ start }) => start && "5px 0 7px"};
     color: ${colors.btn};
   }
 `;
@@ -217,4 +220,110 @@ export const CarText = styled.p`
 
 
 // footer section
-export const Box = styled.div``;
+const common = css`
+  span {
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+`;
+
+export const Footers = styled.div`
+  width: 100%;
+  background-color: ${colors.footer};
+  padding: 50px 0 100px;
+`;
+Footers.Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  .last-box {
+    width: 250px;
+    .link {
+      color: #fff;
+      ${common}
+      span {
+        margin-left: 0;
+      }
+    }
+    .social {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      svg {
+        margin: 20px 20px 0 0;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+    .lang {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      margin-top: 43px;
+      select {
+        border: none;
+        background: transparent;
+        color: #fff;
+        outline: none;
+        option{
+          background-color: #000;
+        }
+      }
+    }
+  }
+`;
+Footers.Logo = styled.div`
+  width: 300px;
+  p {
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    opacity: 0.6;
+    margin-bottom: 20px;
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-top: 15px;
+    ${common}
+  }
+`;
+export const Box = styled.div`
+  p {
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    opacity: 0.6;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  ul {
+    li {
+      list-style: none;
+      margin-top: 15px;
+      a {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 450;
+        font-size: 14px;
+        line-height: 18px;
+        color: #ffffff;
+        opacity: 0.6;
+      }
+    }
+  }
+`;
