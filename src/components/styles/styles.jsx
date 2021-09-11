@@ -220,7 +220,6 @@ export const CarText = styled.p`
 
 
 // footer section
-
 const common = css`
   span {
     margin-left: 10px;
