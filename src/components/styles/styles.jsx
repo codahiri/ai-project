@@ -12,7 +12,6 @@ const colors = {
 export const Container = styled.div`
   width: 1000px;
   margin: 0 auto;
-
   display: ${({ flex }) => (flex ? "flex" : "block")};
   @media (min-width: 1200px) {
     width: 1200px;
