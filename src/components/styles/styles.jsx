@@ -12,6 +12,11 @@ const colors = {
 export const Container = styled.div`
   width: 1000px;
   margin: 0 auto;
+
+  display: ${({ flex }) => (flex ? "flex" : "block")};
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
 `;
 // button
 export const Button = styled.div`
@@ -98,6 +103,7 @@ export const Headers = styled.div`
 Headers.Top = styled.div`
   display: flex;
   align-items: center;
+  /* margin-top: ${({style})=>style && '235px'}; */
 `;
 Headers.Bottom = styled.div`
   display: flex;
@@ -116,9 +122,17 @@ export const SideLeft = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+  /* margin-top: 300px;
+  margin-left: 118px; */
+  margin: ${({ margin }) => margin && "300px 0 0 90px"};
 `;
 export const SideRight = styled.div`
   width: 50%;
+  .abs {
+    position: absolute;
+    top: 130px;
+    left: 256px;
+  }
 `;
 export const Desc = styled.div`
   font-family: Open Sans;
@@ -151,6 +165,61 @@ Headers.Buttons = styled.div`
   display: flex;
   align-items: center;
 `;
+
+// about section
+export const All = styled.div`
+  background-color: #020a18;
+  width: 100%;
+  height: 800px;
+  position: relative;
+  padding-top: ${({ marTop }) => marTop && "170px"};
+`;
+
+export const AboutImg = styled.img`
+  margin: 130px 0 0 0;
+`;
+
+// carousel section
+export const Caros = styled.div`
+  width: 347px;
+  height: 389px;
+  background-color: #0f1624;
+  backdrop-filter: blur(200px);
+  border-radius: 10px;
+  margin-left: 30px;
+  padding: 0 30px;
+  box-sizing: border-box;
+`;
+
+export const CarImg = styled.img`
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: ${({ padding }) => (padding ? "47px" : "30px")};
+  box-sizing: border-box;
+`;
+
+export const CarTitle = styled.div`
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 125%;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.7;
+  margin-top: ${({ pdTop }) => (pdTop ? "46px" : "30px")};
+`;
+export const CarText = styled.p`
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.7;
+  margin-top: 30px;
+`;
+
+
+
 // footer section
 
 const common = css`
