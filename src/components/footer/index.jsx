@@ -109,6 +109,7 @@ export const Footer = () => {
             </ul>
           </Box>
           <Box className="last-box">
+            
             <h1>ABOUT THE STORE</h1>
             <p>
               Lorem ipsum is placeholder text commonly used in the graphic,
