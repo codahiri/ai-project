@@ -16,15 +16,15 @@ export const Car = () => {
         //   centerPadding={30}
         breakpoints={[
           {
-            size: 200,
+    size: 200,
             settings: {
-              slidesToShow: 1,
+                ings: {  slidesToShow: 1,
               showArrows: false,
               showIndicator: false,
               swipeable: true,
             },
           },
-          {
+          
             size: 600,
             settings: {
               slidesToShow: 3,
